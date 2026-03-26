@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Tarjeta Digital</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            width: 90%;
+            max-width: 350px;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #007AFF;
+        }
+        h1 { margin: 15px 0 5px; font-size: 1.5rem; color: #333; }
+        p { color: #666; margin-bottom: 25px; }
+        .btn {
+            display: block;
+            background: #007AFF;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 10px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+        .btn:active { transform: scale(0.98); }
+        .btn-whatsapp { background: #25D366; }
+        .btn-save { background: #333; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Foto" class="profile-img">
+        <h1>Tu Nombre</h1>
+        <p>Tu Profesión / Cargo</p>
+
+        <a href="tel:+123456789" class="btn">📞 Llamar</a>
+        <a href="https://wa.me/123456789" class="btn btn-whatsapp">💬 WhatsApp</a>
+        <a href="mailto:correo@ejemplo.com" class="btn">📧 Email</a>
+        
+        <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3AApellido%3BNombre%0AFN%3ANombre%20Apellido%0ATEL%3BTYPE%3DCELL%3A%2B123456789%0AEMAIL%3Acorreo%40ejemplo.com%0AEND%3AVCARD" 
+           download="contacto.vcf" class="btn btn-save">
+           💾 Guardar en Agenda
+        </a>
+    </div>
+
+</body>
+</html>
